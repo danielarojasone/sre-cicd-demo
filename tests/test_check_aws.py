@@ -1,4 +1,9 @@
-from check_aws import check_region, get_uptime_pct
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from check_aws import check_region, get_uptime_pct  # noqa: E402
 
 
 def test_valid_region():
